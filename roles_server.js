@@ -24,8 +24,6 @@ Meteor.methods({
   },
 })
 
-console.log("nicolaslopezj_roles########1", Roles);
-
 /**
  * Adds roles to a user
  */
