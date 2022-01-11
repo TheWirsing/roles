@@ -1,3 +1,17 @@
+
+const willChangeWithParent = (object, key) => {
+  if (!_.isObject(object)) {
+    return;
+  }
+  var willChange = false;
+  _.each(_.keys(object), function(modifyingKey) {
+    if (key && key.indexOf(modifyingKey) === 0) {
+      willChange = true;
+    }
+  });
+  return willChange;
+};
+
 /**
  * Init the variable
  */
@@ -394,7 +408,7 @@ Mongo.Collection.prototype.attachRoles = function (name, dontAllow) {
 
       for (var i in forbiddenFields) {
         var field = forbiddenFields[i]
-        if (objectHasKey(doc, field)) {
+        if (doc.hasOwnProperty(field)) {
           if (Roles.debug) {
             console.log(`[${name}.forbiddenField] Field ${field} is forbidden for ${userId}`)
           }
@@ -417,7 +431,7 @@ Mongo.Collection.prototype.attachRoles = function (name, dontAllow) {
         var field = forbiddenFields[i]
         for (var j in types) {
           var type = types[j]
-          if (objectHasKey(modifier[type], field)) {
+          if (modifier[type].hasOwnProperty(field)) {
             if (Roles.debug) {
               console.log(`[${name}.forbiddenField] Field ${field} is forbidden for ${userId}`)
             }

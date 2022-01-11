@@ -1,4 +1,4 @@
-import {Meteor} from 'meteor/meteor'
+import { Meteor } from 'meteor/meteor'
 import {check, Match} from 'meteor/check'
 
 /**
@@ -23,6 +23,8 @@ Meteor.methods({
     console.log('roles migrated')
   },
 })
+
+console.log("nicolaslopezj_roles########1", Roles);
 
 /**
  * Adds roles to a user
@@ -106,3 +108,4 @@ Roles.action = function (action, userOptions) {
     }
   }
 }
+

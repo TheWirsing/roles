@@ -10,7 +10,7 @@ The most advanced roles package for meteor.
 ## Installing
 
 ```
-meteor add nicolaslopezj:roles
+meteor add thewirsing:roles
 ```
 
 ## Basic use
@@ -164,7 +164,7 @@ To check a permission in GraphQL resolvers you can use the ```@Roles.graphQLActi
 Example:
 
 ```js
-import {Roles} from 'meteor/nicolaslopezj:roles'
+import {Roles} from 'meteor/thewirsing:roles'
 
 const role = new Roles.Role('role')
 
@@ -296,5 +296,5 @@ Now roles are saved in the users collection. You need to migrate the db to updat
 To migrate run:
 
 ```js
-Meteor.call('nicolaslopezj_roles_migrate');
+Meteor.call('thewirsing_roles_migrate');
 ```
