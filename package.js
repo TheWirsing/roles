@@ -7,7 +7,7 @@ Package.describe({
 
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0', '2.3')
+  api.versionsFrom(['1.0', '2.3'])
 
   both = ['client', 'server']
 
