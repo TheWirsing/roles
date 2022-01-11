@@ -1,7 +1,7 @@
 Package.describe({
   name: 'thewirsing:roles',
   summary: 'The most advanced roles package for meteor',
-  version: '3.0.0',
+  version: '4.0.0',
   git: 'https://github.com/thewirsing/roles'
 })
 
